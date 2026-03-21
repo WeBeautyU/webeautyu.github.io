@@ -519,11 +519,5 @@ window.addEventListener('resize', Utils.debounce(() => {
     console.log('Window resized');
 }, 250));
 
-// Prevent form resubmission - UTM 파라미터 보존
-if (window.history.replaceState) {
-    const url = new URL(window.location.href);
-    // UTM 파라미터가 없을 때만 replaceState 실행
-    if (!url.searchParams.has('utm_source')) {
-        window.history.replaceState(null, null, window.location.href);
-    }
+
 }

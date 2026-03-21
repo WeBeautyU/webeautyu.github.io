@@ -9,7 +9,19 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-SMSKVZGRWL');
+  // UTM 파라미터를 직접 읽어서 GA4에 전달
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmSource = urlParams.get('utm_source');
+  const utmMedium = urlParams.get('utm_medium');
+  const utmCampaign = urlParams.get('utm_campaign');
+  const utmId = urlParams.get('utm_id');
+
+  gtag('config', 'G-SMSKVZGRWL', {
+    ...(utmSource && { 'campaign_source': utmSource }),
+    ...(utmMedium && { 'campaign_medium': utmMedium }),
+    ...(utmCampaign && { 'campaign_name': utmCampaign }),
+    ...(utmId && { 'campaign_id': utmId })
+  });
 </script>
 
 
