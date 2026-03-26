@@ -519,5 +519,7 @@ window.addEventListener('resize', Utils.debounce(() => {
     console.log('Window resized');
 }, 250));
 
-
+// Prevent form resubmission on page refresh
+if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
 }

@@ -1,31 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SMSKVZGRWL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  // UTM 파라미터를 직접 읽어서 GA4에 전달
-  const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get('utm_source');
-  const utmMedium = urlParams.get('utm_medium');
-  const utmCampaign = urlParams.get('utm_campaign');
-  const utmId = urlParams.get('utm_id');
-
-  gtag('config', 'G-SMSKVZGRWL', {
-    ...(utmSource && { 'campaign_source': utmSource }),
-    ...(utmMedium && { 'campaign_medium': utmMedium }),
-    ...(utmCampaign && { 'campaign_name': utmCampaign }),
-    ...(utmId && { 'campaign_id': utmId })
-  });
-  gtag('config', 'AW-18039487540');  // B계정 Google Ads ID (추가)
-</script>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WE BEAUTY U - Korean Plastic Surgery Medical Tourism</title>
