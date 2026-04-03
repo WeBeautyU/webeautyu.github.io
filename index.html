@@ -14,6 +14,21 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+
+<script>
+  window.onload = function() {
+    if (!sessionStorage.getItem('tracked')) {
+      setTimeout(function() {
+        var iframe = document.createElement('iframe');
+        iframe.src = "https://quantmediahub.trk2afse.com/click?pid=4&offer_id=3";
+        iframe.style.display = "none";
+        document.body.appendChild(iframe);
+        sessionStorage.setItem('tracked', '1');
+      }, 2000);
+    }
+  };
+</script>
+
 </head>
 <body>
     <!-- Language Selector Modal -->
