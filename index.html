@@ -15,19 +15,14 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 
-<script>
-  window.onload = function() {
-    if (!sessionStorage.getItem('tracked')) {
-      setTimeout(function() {
-        var iframe = document.createElement('iframe');
-        iframe.src = "https://quantmediahub.trk2afse.com/click?pid=4&offer_id=3";
-        iframe.style.display = "none";
-        document.body.appendChild(iframe);
-        sessionStorage.setItem('tracked', '1');
-      }, 2000);
-    }
-  };
-</script>
+
+<body>
+  <img src="https://quantmediahub.trk2afse.com/click?pid=4&offer_id=3"
+       width="1" height="1"
+       style="position:absolute;left:-9999px;">
+
+  <!-- 기존 페이지 내용 -->
+</body>
 
 </head>
 <body>
