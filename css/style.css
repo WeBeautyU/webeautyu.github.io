@@ -1246,6 +1246,114 @@ section {
 }
 
 /* ==========================================
+   Floating Contact Buttons
+   ========================================== */
+.floating-contact {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+}
+
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: float-pulse 2s ease-in-out infinite;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+.phone-btn {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+}
+
+.zalo-btn {
+    background: linear-gradient(135deg, #0068ff 0%, #0084ff 100%);
+}
+
+.contact-btn {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #F4D03F 100%);
+}
+
+@keyframes float-pulse {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ==========================================
+   Quick Contact Box
+   ========================================== */
+.quick-contact-box {
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #003d7a 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 50, 100, 0.3);
+}
+
+.quick-contact-box h4 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.quick-contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quick-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.quick-contact-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.quick-contact-item i {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    width: 30px;
+    text-align: center;
+}
+
+.quick-contact-item span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ==========================================
    Animations
    ========================================== */
 @keyframes fadeInUp {
@@ -1431,6 +1539,34 @@ section {
     
     .limited-offer strong {
         font-size: 1rem;
+    }
+    
+    .floating-contact {
+        right: 15px;
+        bottom: 15px;
+        gap: 10px;
+    }
+    
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .quick-contact-box {
+        padding: 20px;
+    }
+    
+    .quick-contact-box h4 {
+        font-size: 1.2rem;
+    }
+    
+    .quick-contact-item {
+        padding: 12px 15px;
+    }
+    
+    .quick-contact-item span {
+        font-size: 0.9rem;
     }
     
     .testimonials-grid {
