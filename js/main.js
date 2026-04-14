@@ -467,6 +467,29 @@ const AccordionManager = {
 };
 
 // ==========================================
+// FAQ Manager
+// ==========================================
+const FAQManager = {
+    init() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Toggle clicked item
+                if (isActive) {
+                    faqItem.classList.remove('active');
+                } else {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    }
+};
+
+// ==========================================
 // Initialize All Modules
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -479,8 +502,9 @@ document.addEventListener('DOMContentLoaded', () => {
     LoadingManager.init();
     ProcedureCards.init();
     AccordionManager.init();
+    FAQManager.init();
     
-    console.log('KC Holdings Medical Tourism Website - Initialized Successfully');
+    console.log('WE BEAUTY U Medical Tourism Website - Initialized Successfully');
 });
 
 // ==========================================
